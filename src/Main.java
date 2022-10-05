@@ -6,6 +6,12 @@ class Main {
         //Creating a scanner
         Scanner calculator = new Scanner(System.in);
 
+        //Look Purposes
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("| What's my cost?                 |");
+        System.out.println("| The only calculator you'll need!|");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
         //Stating the total bill/cost of the food only
         System.out.println("-------------------------------------------------------------");
         System.out.println("| Enter the total cost of food/items you purchased below.   |");
@@ -15,7 +21,9 @@ class Main {
         //Stating the percent of tip in decimal form.
         System.out.println("------------------------------------------");
         System.out.println("| Enter percent of tip you wish to give. |");
+        System.out.println("|     (THIS MUST BE A WHOLE NUMBER.)     |");
         System.out.println("------------------------------------------");
+
         double percenttip = calculator.nextInt();
         percenttip/=100;      //Changing into decimal form
 
@@ -26,10 +34,13 @@ class Main {
         int people = calculator.nextInt();
 
         //Calculations.
-
+        // To find only the tip price, multiply tip price by the total bill.
         double tiponly = (percenttip*bill);
+        // To find the total, add bill + tip.
         double total = (bill+tiponly);
+        // To find the amount of money for tip each person has to pay, divide tip cost by amount of people.
         double tipperperson = (tiponly/people);
+        // To find the amount of money for total each person has to pay, divide total cost by amount of people.
         double totalperperson = (total/people);
 
         //Look purposes.
